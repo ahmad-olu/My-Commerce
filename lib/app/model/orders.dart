@@ -1,9 +1,9 @@
 class Orders {
   Orders({
-    required this.id,
     required this.userId,
     required this.status,
     required this.totalAmount,
+    this.id,
   });
 
   factory Orders.fromMap(Map<String, dynamic> map) {
@@ -13,6 +13,14 @@ class Orders {
       status: (map['status'] ?? false) as bool,
       // ignore: avoid_dynamic_calls
       totalAmount: (map['total_amount']?.toDouble() ?? 0.0) as double,
+    );
+  }
+
+  factory Orders.empty() {
+    return Orders(
+      status: false,
+      totalAmount: 0,
+      userId: '',
     );
   }
 

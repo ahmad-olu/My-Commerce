@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:my_commerce/auth/bloc/bloc/auth_bloc.dart';
-import 'package:my_commerce/products/bloc/cubit/create_product_cubit.dart';
+import 'package:my_commerce/products/bloc/create_product_cubit/create_product_cubit.dart';
 
 class CreateProductPage extends StatelessWidget {
   const CreateProductPage({super.key});

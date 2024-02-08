@@ -130,7 +130,7 @@ class CartView extends StatelessWidget {
                   .read<CartCubit>()
                   .stripePaymentCheckout(context, context.mounted);
               //stripePaymentCheckout(context, state);
-              //  Navigator.pop(context);
+              //Navigator.pop(context);
             },
             child: const Text('Yes'),
           ),
@@ -144,7 +144,9 @@ class CartView extends StatelessWidget {
   }
 
   Future<void> stripePaymentCheckout(
-      BuildContext context, CartState state) async {
+    BuildContext context,
+    CartState state,
+  ) async {
     if (state.orderItems.isEmpty) {
       return;
     }
